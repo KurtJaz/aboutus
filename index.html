@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>About Us · Facilibook</title>
+<style>
+:root{--bg:#fff;--surface:#f8fafc;--line:#e2e8f0;--text:#1e293b;--muted:#64748b;--brand:#4f46e5;--brand-d:#3730a3;--tint:#eef2ff;--accent:#7c3aed;--btn:#4f46e5;
+box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#0f1220;--surface:#171a2b;--line:#2a2f47;--text:#f1f5f9;--muted:#94a3b8;--brand:#818cf8;--brand-d:#c7d2fe;--tint:#25294a;--accent:#a78bfa}}
+:root[data-theme="dark"]{--bg:#0f1220;--surface:#171a2b;--line:#2a2f47;--text:#f1f5f9;--muted:#94a3b8;--brand:#818cf8;--brand-d:#c7d2fe;--tint:#25294a;--accent:#a78bfa}
+html{scroll-behavior:smooth;scroll-padding-top:calc(env(safe-area-inset-top,0px) + 72px)}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--text);font:16px/1.55 system-ui,-apple-system,"Segoe UI",Roboto,sans-serif}
+.wrap{max-width:1000px;margin:0 auto;padding:0 24px}
+header{position:sticky;top:env(safe-area-inset-top,0px);z-index:5;background:var(--bg);border-bottom:1px solid var(--line)}
+header .wrap{display:flex;align-items:center;gap:12px;padding-top:12px;padding-bottom:12px}
+.badge{width:36px;height:36px;border-radius:50%;background:var(--btn);color:#fff;display:grid;place-items:center;font-weight:700}
+.brand b{display:block;color:var(--brand-d);font-size:15px;line-height:1.2}
+.brand span{color:var(--muted);font-size:11px}
+nav{margin-left:auto;display:flex;gap:18px;font-size:14px;font-weight:600}
+nav a{color:var(--muted);text-decoration:none}nav a:hover{color:var(--brand)}
+section{margin-top:56px}
+.hero{padding-top:56px}
+.kicker{color:var(--accent);font-weight:600;font-size:14px;margin:0}
+h1{font-size:clamp(30px,6vw,44px);line-height:1.12;margin:10px 0 14px;letter-spacing:-.02em}
+.lede{color:var(--muted);max-width:640px;font-size:17px;margin:0}
+.btns{display:flex;flex-wrap:wrap;gap:12px;margin-top:24px}
+.btn{display:inline-block;padding:11px 22px;border-radius:9px;font-weight:700;font-size:14px;text-decoration:none;border:1.5px solid var(--btn)}
+.btn.p{background:var(--btn);color:#fff}.btn.p:hover{background:#433bd6}
+.btn.o{color:var(--brand)}.btn.o:hover{background:var(--tint)}
+.stats{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:16px}
+.card{background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:22px 24px}
+.stat b{display:block;font-size:40px;line-height:1.1;color:var(--brand)}
+.stat span{color:var(--muted);font-size:14px}
+.motto{border:1px solid var(--line);border-left:4px solid var(--btn);border-radius:6px;padding:24px 28px}
+.motto h2{margin:0 0 8px;color:var(--brand-d);font-size:24px}
+.motto p{margin:0;color:var(--muted)}
+h2.t{font-size:26px;margin:0 0 18px;letter-spacing:-.01em}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:16px}
+.space{background:var(--bg);border:1px solid var(--line);border-radius:12px;padding:18px 20px}
+.space:hover{border-color:var(--brand)}
+.space b{display:block;margin-bottom:2px}.space span{color:var(--muted);font-size:14px}
+.steps{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:16px;counter-reset:s}
+.step{background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:18px 20px;counter-increment:s}
+.step::before{content:counter(s);display:grid;place-items:center;width:28px;height:28px;border-radius:50%;background:var(--tint);color:var(--brand);font-weight:700;font-size:13px;margin-bottom:8px}
+.step b{display:block}.step span{color:var(--muted);font-size:14px}
+.team{display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:16px}
+.member{display:flex;align-items:center;gap:14px;border:1px solid var(--line);border-radius:12px;padding:16px 18px}
+.av{flex:none;width:52px;height:52px;border-radius:50%;background:var(--tint);color:var(--brand);display:grid;place-items:center;font-weight:700;overflow:hidden}
+.av img{width:100%;height:100%;object-fit:cover}
+.member b{display:block;font-size:15px;line-height:1.3}.member span{color:var(--accent);font-size:13px}
+.cta{background:#4f46e5;color:#fff;border-radius:16px;padding:40px}
+.cta h2{margin:0 0 6px;font-size:28px}.cta p{margin:0;color:#e0e7ff}
+.cta .btns .btn{border-color:#fff;color:#fff}.cta .btns .btn.w{background:#fff;color:#3730a3}
+footer{margin-top:56px;border-top:1px solid var(--line);padding:28px 0 48px;color:var(--muted);font-size:14px}
+footer h2{color:var(--text);font-size:22px;margin:0 0 8px}
+footer b{color:var(--text)}footer small{display:block;margin-top:16px;color:var(--muted);opacity:.8}
+@media(max-width:640px){nav{display:none}.cta{padding:28px 22px}}
+</style>
+</head>
+<body>
+<header><div class="wrap">
+  <div class="badge">F</div>
+  <div class="brand"><b>Facilibook</b><span>School Facility Appointment System</span></div>
+  <nav><a href="#how">How it works</a><a href="#team">Team</a><a href="#contact">Contact</a></nav>
+</div></header>
+
+<main class="wrap">
+  <section class="hero" style="margin-top:0">
+    <p class="kicker">Serving the OLLC community</p>
+    <h1>Book every space on campus with ease</h1>
+    <p class="lede">Facilibook is the facility appointment system for Our Lady of Lourdes College. From classrooms to the auditorium, every bookable space is in one place, with no paper logbooks and no double-booked rooms.</p>
+    <div class="btns"><a class="btn p" href="#how">How it works</a><a class="btn o" href="#team">Meet the team</a></div>
+  </section>
+
+  <section class="stats">
+    <div class="card stat"><b>9</b><span>Campus facilities</span></div>
+    <div class="card stat"><b>6</b><span>Facility types, from classroom to conference</span></div>
+    <div class="card stat"><b>3</b><span>Roles: student, teacher, and admin</span></div>
+  </section>
+
+  <section class="motto">
+    <h2>Truth, Commitment &amp; Excellence</h2>
+    <p>Facilibook is built around the college's motto. Every booking is visible to everyone, every request gets an answer, and every space is put to good use, so learning is never held up by a scheduling problem.</p>
+  </section>
+
+  <section>
+    <h2 class="t">Find your space</h2>
+    <div class="grid">
+      <div class="space"><b>Classrooms</b><span>Standard rooms for lessons and group work.</span></div>
+      <div class="space"><b>Laboratories</b><span>Computer and science labs with the equipment you need.</span></div>
+      <div class="space"><b>Sports complex</b><span>The basketball court and the indoor gymnasium.</span></div>
+      <div class="space"><b>Main auditorium</b><span>Stage and sound system for programs and events.</span></div>
+      <div class="space"><b>Library hall</b><span>A quiet study area for individuals and groups.</span></div>
+      <div class="space"><b>Conference room</b><span>Meetings with a video conferencing setup.</span></div>
+    </div>
+  </section>
+
+  <section id="how">
+    <h2 class="t">How it works</h2>
+    <div class="steps">
+      <div class="step"><b>Pick a date</b><span>Choose the day you need the space.</span></div>
+      <div class="step"><b>Choose a room and time</b><span>See open and booked slots before you commit.</span></div>
+      <div class="step"><b>Submit your request</b><span>An administrator approves or rejects it.</span></div>
+      <div class="step"><b>Track it</b><span>Follow it as Pending, Approved, Rejected, or Cancelled.</span></div>
+    </div>
+  </section>
+
+  <section id="team">
+    <h2 class="t">Meet the team</h2>
+    <div class="team" id="teamGrid"></div>
+  </section>
+
+  <section class="cta">
+    <h2>Ready to book your space?</h2>
+    <p>Start planning with Facilibook today.</p>
+    <div class="btns"><a class="btn w" href="#contact">Contact us</a></div>
+  </section>
+</main>
+
+<footer id="contact"><div class="wrap">
+  <h2>Contact</h2>
+  <b>Our Lady of Lourdes College</b><br>
+  Gen. T. De Leon, Valenzuela City, Metro Manila, Philippines<br>
+  (02) 8922-0077<br>
+  Team email: to be added
+  <small>© 2026 Facilibook. Built with JavaFX and Supabase.</small>
+</div></footer>
+
+<script>
+
+const TEAM=[
+["Rebuldela, Kurt Eiron U.","","https://cdn.phototourl.com/member/2026-09-30-3bbd5a78-1412-49b2-8464-674adc99846a.jpg"],
+["Canada, Earl","","https://cdn.phototourl.com/member/2026-09-30-9ede64d7-825f-4f50-b5f1-829de04bffc5.jpg"],
+["Castillo, Wency","","https://cdn.phototourl.com/member/2026-09-30-a4c83474-5ac6-4117-9ee4-b77fade17529.jpg"],
+["Coronel, John Carlo","","https://cdn.phototourl.com/member/2026-09-30-95e33f6f-c250-463b-80d9-a2558d61bbc1.jpg"],
+["Espineda, Kent Justin","","https://cdn.phototourl.com/member/2026-09-30-324d3793-d976-4717-9c1d-e319878932cd.jpg"],
+["Estorninos, Jade Andrew","",""],
+["Lim, Prince Jhared","","https://cdn.phototourl.com/member/2026-09-30-9ede64d7-825f-4f50-b5f1-829de04bffc5.jpg"],
+["Lopez, Rein Justin","","https://cdn.phototourl.com/member/2026-09-30-3a5b67a9-af3f-4c8d-8d85-fab86e509686.jpg"],
+["Marasigan, John Exequiel","","https://cdn.phototourl.com/member/2026-09-30-0240aab5-b1c9-4884-9a02-0c66cb736565.jpg"],
+["Nicolas, Kobe","",""],
+["Penaflor, Sao Paolo","","https://cdn.phototourl.com/member/2026-09-30-a9176af5-e061-4bc0-bc25-af2cf36c525c.jpg"],
+["San Agustin, Dustin Fermin","","https://cdn.phototourl.com/member/2026-09-30-5fa97f56-9060-4f07-a0f4-d262d995eb3e.jpg"],
+["Unat, Cris Edan","","https://cdn.phototourl.com/member/2026-09-30-231e690d-e705-4bab-82f6-e77141fc38ea.jpg"]];
+const grid=document.getElementById("teamGrid");
+for(const [name,role,photo] of TEAM){
+  const [last,first]=name.split(", ");
+  const initials=first[0]+last[0];
+  const el=document.createElement("div");el.className="member";
+  const av=document.createElement("div");av.className="av";
+  if(photo){
+    const i=document.createElement("img");i.alt=name;i.loading="lazy";
+    i.onerror=()=>{i.remove();av.textContent=initials;};
+    i.src=photo;av.appendChild(i);
+  } else av.textContent=initials;
+  const t=document.createElement("div");
+  const b=document.createElement("b");b.textContent=name;t.appendChild(b);
+  if(role){const s=document.createElement("span");s.textContent=role;t.appendChild(s);}
+  el.append(av,t);grid.appendChild(el);
+}
+</script>
+</body>
+</html>
